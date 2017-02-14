@@ -5,7 +5,7 @@ node {
   stage('Package') {
     dir('webapp') {
       println "mvnHome is here: $mvnHome"
-      sh 'mvn clean package -DskipTests'
+      sh '$mvnHome/mvn clean package -DskipTests'
     }
   }
 
