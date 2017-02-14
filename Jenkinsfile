@@ -1,6 +1,6 @@
 node {
   checkout scm
-  def mvnHome = "${tool 'Maven3'}/bin"
+  def mvnHome = "${tool 'Maven3'}\bin"
   //env.PATH = "${tool 'Maven3'}/bin:${env.PATH}"
   stage('Package') {
     dir('webapp') {
