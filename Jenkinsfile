@@ -4,6 +4,7 @@ node {
   //env.PATH = "${tool 'Maven3'}/bin:${env.PATH}"
   stage('Package') {
     dir('webapp') {
+      println mvnHome
       sh '${mvnHome}/mvn clean package -DskipTests'
     }
   }
