@@ -1,10 +1,10 @@
 node {
   checkout scm
-  def mvnHome = tool 'Maven3'
+  def mvnHome = "${tool 'Maven3'}/bin"
   //env.PATH = "${tool 'Maven3'}/bin:${env.PATH}"
   stage('Package') {
     dir('webapp') {
-      sh '${mvnHome}/bin/mvn clean package -DskipTests'
+      sh '${mvnHome}/mvn clean package -DskipTests'
     }
   }
 
